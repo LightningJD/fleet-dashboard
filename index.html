@@ -323,7 +323,9 @@ body {
     const updatedStr = updated.toLocaleString('en-US', { weekday:'short', month:'short', day:'numeric', hour:'numeric', minute:'2-digit' });
 
     // ========== FIX 1: Profit Calculator (from costs object) ==========
-    const monthOfYear = updated.getMonth() + 1; // 1-12
+    // Months since policy start (not calendar month)
+    const policyStart = new Date(costs.policyStart);
+    const monthOfYear = Math.max(1, Math.round((updated - policyStart) / (1000 * 60 * 60 * 24 * 30)));
     const gross = D.earnings.totalEarned;
     const trips = D.performance.completedTrips.value;
     const costs = D.costs;
@@ -334,10 +336,11 @@ body {
     const totalCosts = turoFees + insuranceYTD + cleaningYTD;
     const netProfit = gross - totalCosts;
 
-    // Per-trip economics
+    // Per-trip economics (REAL net including all costs)
     const revenuePerTrip = trips > 0 ? gross / trips : 0;
     const turoFeePerTrip = revenuePerTrip * (costs.turoFeePercent / 100);
-    const netPerTrip = revenuePerTrip - turoFeePerTrip;
+    const overheadPerTrip = trips > 0 ? (insuranceYTD + cleaningYTD) / trips : 0;
+    const realNetPerTrip = revenuePerTrip - turoFeePerTrip - overheadPerTrip;
 
     // ---- Competitor rows ----
     const compRows = (D.marketData.competitors || []).map(c => ({ ...c }));
@@ -430,7 +433,8 @@ body {
           <div class="pt-title">Per-Trip Economics (${trips} trips)</div>
           <div class="pt-row"><span class="lbl">Revenue per trip</span><span class="val">${fmt(revenuePerTrip)}</span></div>
           <div class="pt-row"><span class="lbl">Turo fee per trip (${costs.turoFeePercent}%)</span><span class="val" style="color:var(--red)">− ${fmt(turoFeePerTrip)}</span></div>
-          <div class="pt-row"><span class="lbl">Net per trip (before overhead)</span><span class="val" style="color:var(--green)">${fmt(netPerTrip)}</span></div>
+          <div class="pt-row"><span class="lbl">Overhead per trip (insurance + cleaning)</span><span class="val" style="color:var(--red)">− ${fmt(overheadPerTrip)}</span></div>
+          <div class="pt-row"><span class="lbl">REAL net per trip (all costs)</span><span class="val" style="color:${realNetPerTrip >= 0 ? 'var(--green)' : 'var(--red)'}">${realNetPerTrip >= 0 ? '+' : ''}${fmt(realNetPerTrip)}</span></div>
         </div>
       </div>`;
 
@@ -526,7 +530,7 @@ body {
         h += `
           <div class="santa-fe-alert">
             <div class="big">🚀 ZERO competitors for Hyundai Santa Fe in Las Vegas</div>
-            <div class="sub">First-mover advantage — <strong>$1,400+/mo</strong> potential revenue while unlisted</div>
+            <div class="sub">First-mover advantage — est. <strong>$300-500/mo</strong> in early months (realistic for new listing at 15-25% utilization)</div>
           </div>`;
       } else {
         h += `

@@ -51,32 +51,129 @@
     "policyEnd": "2027-06-15"
   },
   "performance": {
-    "cancellationRate": { "value": 0, "goal": 3, "goalType": "max", "unit": "%" },
-    "fiveStarRate": { "value": 100, "goal": 85, "goalType": "min", "unit": "%" },
-    "maintenance": { "value": 100, "goal": 80, "goalType": "min", "unit": "%" },
-    "cleanliness": { "value": 100, "goal": 80, "goalType": "min", "unit": "%" },
-    "completedTrips": { "value": 3, "goal": 20, "goalType": "min", "unit": "trips" }
+    "cancellationRate": {
+      "value": 0,
+      "goal": 3,
+      "goalType": "max",
+      "unit": "%"
+    },
+    "fiveStarRate": {
+      "value": 100,
+      "goal": 85,
+      "goalType": "min",
+      "unit": "%"
+    },
+    "maintenance": {
+      "value": 100,
+      "goal": 80,
+      "goalType": "min",
+      "unit": "%"
+    },
+    "cleanliness": {
+      "value": 100,
+      "goal": 80,
+      "goalType": "min",
+      "unit": "%"
+    },
+    "completedTrips": {
+      "value": 3,
+      "goal": 20,
+      "goalType": "min",
+      "unit": "trips"
+    }
   },
   "calendar": {
     "averagePrice": 55,
     "days": [
-      { "date": "2026-06-16", "day": "Tue", "price": 52 },
-      { "date": "2026-06-17", "day": "Wed", "price": 53 },
-      { "date": "2026-06-18", "day": "Thu", "price": 56 },
-      { "date": "2026-06-19", "day": "Fri", "price": 55 },
-      { "date": "2026-06-20", "day": "Sat", "price": 57, "weekend": true },
-      { "date": "2026-06-21", "day": "Sun", "price": 54, "weekend": true },
-      { "date": "2026-06-22", "day": "Mon", "price": 55 },
-      { "date": "2026-06-23", "day": "Tue", "price": 55 },
-      { "date": "2026-06-24", "day": "Wed", "price": 55 },
-      { "date": "2026-06-25", "day": "Thu", "price": 59 },
-      { "date": "2026-06-26", "day": "Fri", "price": 56 },
-      { "date": "2026-06-27", "day": "Sat", "price": 58, "weekend": true },
-      { "date": "2026-06-28", "day": "Sun", "price": 54, "weekend": true },
-      { "date": "2026-06-29", "day": "Mon", "price": 55 },
-      { "date": "2026-06-30", "day": "Tue", "price": 53 },
-      { "date": "2026-07-01", "day": "Wed", "price": 54 },
-      { "date": "2026-07-02", "day": "Thu", "price": 57 }
+      {
+        "date": "2026-06-16",
+        "day": "Tue",
+        "price": 52
+      },
+      {
+        "date": "2026-06-17",
+        "day": "Wed",
+        "price": 53
+      },
+      {
+        "date": "2026-06-18",
+        "day": "Thu",
+        "price": 56
+      },
+      {
+        "date": "2026-06-19",
+        "day": "Fri",
+        "price": 55
+      },
+      {
+        "date": "2026-06-20",
+        "day": "Sat",
+        "price": 57,
+        "weekend": true
+      },
+      {
+        "date": "2026-06-21",
+        "day": "Sun",
+        "price": 54,
+        "weekend": true
+      },
+      {
+        "date": "2026-06-22",
+        "day": "Mon",
+        "price": 55
+      },
+      {
+        "date": "2026-06-23",
+        "day": "Tue",
+        "price": 55
+      },
+      {
+        "date": "2026-06-24",
+        "day": "Wed",
+        "price": 55
+      },
+      {
+        "date": "2026-06-25",
+        "day": "Thu",
+        "price": 59
+      },
+      {
+        "date": "2026-06-26",
+        "day": "Fri",
+        "price": 56
+      },
+      {
+        "date": "2026-06-27",
+        "day": "Sat",
+        "price": 58,
+        "weekend": true
+      },
+      {
+        "date": "2026-06-28",
+        "day": "Sun",
+        "price": 54,
+        "weekend": true
+      },
+      {
+        "date": "2026-06-29",
+        "day": "Mon",
+        "price": 55
+      },
+      {
+        "date": "2026-06-30",
+        "day": "Tue",
+        "price": 53
+      },
+      {
+        "date": "2026-07-01",
+        "day": "Wed",
+        "price": 54
+      },
+      {
+        "date": "2026-07-02",
+        "day": "Thu",
+        "price": 57
+      }
     ]
   },
   "trips": [
@@ -91,7 +188,7 @@
     }
   ],
   "marketData": {
-    "source": "Turo Insights — same model within 10mi radius",
+    "source": "Turo Insights \u2014 same model within 10mi radius",
     "sampleMonth": "May 2026",
     "sampleSize": 10,
     "areaWeekendMedian": 64,
@@ -101,15 +198,99 @@
     "yourCalendarWeekendAvg": 56,
     "yourCalendarWeekdayAvg": 55,
     "competitors": [
-      { "year": 2019, "rating": 4.7, "trips": 13, "trim": "Standard Range Plus", "distance": "4.4 mi", "utilization": "Medium", "weekendPrice": 48, "weekdayPrice": 42 },
-      { "year": 2018, "rating": 5.0, "trips": 19, "trim": "Long Range Battery", "distance": "6.91 mi", "utilization": "High", "allStar": true, "weekendPrice": 54, "weekdayPrice": 53 },
-      { "year": 2019, "rating": 4.95, "trips": 40, "trim": "Long Range", "distance": "7.15 mi", "utilization": "Low", "weekendPrice": 59, "weekdayPrice": 51 },
-      { "year": 2019, "rating": 4.69, "trips": 60, "trim": "Long Range", "distance": "6.04 mi", "utilization": "Low", "weekendPrice": 62, "weekdayPrice": 62 },
-      { "year": 2018, "rating": 5.0, "trips": 28, "trim": "Long Range Battery", "distance": "6.91 mi", "utilization": "High", "allStar": true, "weekendPrice": 63, "weekdayPrice": 55 },
-      { "year": 2018, "rating": 5.0, "trips": 19, "trim": "Long Range Battery", "distance": "6.04 mi", "utilization": "High", "weekendPrice": 65, "weekdayPrice": 52 },
-      { "year": 2018, "rating": 5.0, "trips": 20, "trim": "Long Range Battery", "distance": "7.32 mi", "utilization": "Low", "weekendPrice": 67, "weekdayPrice": 61 },
-      { "year": 2019, "rating": 5.0, "trips": 15, "trim": "Long Range", "distance": "9.88 mi", "utilization": "High", "allStar": true, "weekendPrice": 67, "weekdayPrice": 53 },
-      { "year": 2019, "rating": 4.9, "trips": 152, "trim": "Long Range", "distance": "3.99 mi", "utilization": "Low", "weekendPrice": 93, "weekdayPrice": 91 }
+      {
+        "year": 2019,
+        "rating": 4.7,
+        "trips": 13,
+        "trim": "Standard Range Plus",
+        "distance": "4.4 mi",
+        "utilization": "Medium",
+        "weekendPrice": 48,
+        "weekdayPrice": 42
+      },
+      {
+        "year": 2018,
+        "rating": 5.0,
+        "trips": 19,
+        "trim": "Long Range Battery",
+        "distance": "6.91 mi",
+        "utilization": "High",
+        "allStar": true,
+        "weekendPrice": 54,
+        "weekdayPrice": 53
+      },
+      {
+        "year": 2019,
+        "rating": 4.95,
+        "trips": 40,
+        "trim": "Long Range",
+        "distance": "7.15 mi",
+        "utilization": "Low",
+        "weekendPrice": 59,
+        "weekdayPrice": 51
+      },
+      {
+        "year": 2019,
+        "rating": 4.69,
+        "trips": 60,
+        "trim": "Long Range",
+        "distance": "6.04 mi",
+        "utilization": "Low",
+        "weekendPrice": 62,
+        "weekdayPrice": 62
+      },
+      {
+        "year": 2018,
+        "rating": 5.0,
+        "trips": 28,
+        "trim": "Long Range Battery",
+        "distance": "6.91 mi",
+        "utilization": "High",
+        "allStar": true,
+        "weekendPrice": 63,
+        "weekdayPrice": 55
+      },
+      {
+        "year": 2018,
+        "rating": 5.0,
+        "trips": 19,
+        "trim": "Long Range Battery",
+        "distance": "6.04 mi",
+        "utilization": "High",
+        "weekendPrice": 65,
+        "weekdayPrice": 52
+      },
+      {
+        "year": 2018,
+        "rating": 5.0,
+        "trips": 20,
+        "trim": "Long Range Battery",
+        "distance": "7.32 mi",
+        "utilization": "Low",
+        "weekendPrice": 67,
+        "weekdayPrice": 61
+      },
+      {
+        "year": 2019,
+        "rating": 5.0,
+        "trips": 15,
+        "trim": "Long Range",
+        "distance": "9.88 mi",
+        "utilization": "High",
+        "allStar": true,
+        "weekendPrice": 67,
+        "weekdayPrice": 53
+      },
+      {
+        "year": 2019,
+        "rating": 4.9,
+        "trips": 152,
+        "trim": "Long Range",
+        "distance": "3.99 mi",
+        "utilization": "Low",
+        "weekendPrice": 93,
+        "weekdayPrice": 91
+      }
     ]
   },
   "santaFeMarket": {
@@ -117,14 +298,40 @@
     "note": "No Hyundai Santa Fe listings found in Las Vegas market"
   },
   "actionItems": [
-    { "priority": "high", "item": "Finish Santa Fe listing — zero competitors in LV, losing ~$1,400/mo potential revenue", "status": "pending" },
-    { "priority": "high", "item": "Increase weekend prices — area median is $64, you charge ~$56", "status": "pending" },
-    { "priority": "medium", "item": "Get to 20 completed trips for All-Star Host status (currently 3/20) — unlocks search priority", "status": "in_progress" },
-    { "priority": "medium", "item": "Order 2 Bouncie GPS trackers (deadline July 15)", "status": "pending" },
-    { "priority": "low", "item": "Get permanent Santa Fe registration at NV DMV (deadline July 15)", "status": "pending" }
+    {
+      "priority": "high",
+      "item": "Finish Santa Fe listing \u2014 zero competitors in LV, est. -500/mo potential revenue",
+      "status": "pending"
+    },
+    {
+      "priority": "high",
+      "item": "Increase weekend prices \u2014 area median is $64, you charge ~$56",
+      "status": "pending"
+    },
+    {
+      "priority": "medium",
+      "item": "Get to 20 completed trips for All-Star Host status (currently 3/20) \u2014 unlocks search priority",
+      "status": "in_progress"
+    },
+    {
+      "priority": "medium",
+      "item": "Order 2 Bouncie GPS trackers (deadline July 15)",
+      "status": "pending"
+    },
+    {
+      "priority": "low",
+      "item": "Get permanent Santa Fe registration at NV DMV (deadline July 15)",
+      "status": "pending"
+    }
   ],
-  "actionItemsNote": "Manually maintained — update in data.json as items are completed or added",
+  "actionItemsNote": "Manually maintained \u2014 update in data.json as items are completed or added",
   "history": [
-    { "date": "2026-06-16", "totalEarned": 736.39, "upcoming": 1098, "completedTrips": 3, "utilization": 16 }
+    {
+      "date": "2026-06-16",
+      "totalEarned": 736.39,
+      "upcoming": 1098,
+      "completedTrips": 3,
+      "utilization": 16
+    }
   ]
 }
