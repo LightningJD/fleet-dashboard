@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      width: 340px;
+      background: #0d1117;
+      color: #e6edf3;
+      padding: 16px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #21262d;
+    }
+
+    .header h1 {
+      font-size: 15px;
+      font-weight: 600;
+      color: #00ff88;
+    }
+
+    .status-section {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .status-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+    }
+
+    .status-label {
+      color: #8b949e;
+    }
+
+    .status-value {
+      color: #e6edf3;
+      font-weight: 500;
+      max-width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .status-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 6px;
+    }
+
+    .status-dot.active {
+      background: #00ff88;
+      box-shadow: 0 0 6px #00ff88;
+    }
+
+    .status-dot.idle {
+      background: #484f58;
+    }
+
+    .status-dot.connected {
+      background: #00ff88;
+    }
+
+    .status-dot.error {
+      background: #ff6b6b;
+    }
+
+    .divider {
+      height: 1px;
+      background: #21262d;
+      margin: 12px 0;
+    }
+
+    .section-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #6e7681;
+      margin-bottom: 8px;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    input[type="password"] {
+      flex: 1;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 7px 10px;
+      color: #e6edf3;
+      font-size: 12px;
+      outline: none;
+    }
+
+    input[type="password"]:focus {
+      border-color: #00ff88;
+    }
+
+    input[type="password"]::placeholder {
+      color: #484f58;
+    }
+
+    .btn {
+      background: #21262d;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 7px 14px;
+      color: #e6edf3;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .btn:hover {
+      background: #30363d;
+    }
+
+    .btn-primary {
+      background: #00ff88;
+      border-color: #00ff88;
+      color: #0d1117;
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      background: #00cc6f;
+    }
+
+    .btn-row {
+      display: flex;
+      gap: 6px;
+    }
+
+    .push-section {
+      margin-top: 10px;
+    }
+
+    .toast {
+      font-size: 11px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      margin-top: 8px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .toast.show {
+      opacity: 1;
+    }
+
+    .toast.success {
+      background: rgba(0, 255, 136, 0.1);
+      color: #00ff88;
+      border: 1px solid rgba(0, 255, 136, 0.3);
+    }
+
+    .toast.error {
+      background: rgba(255, 107, 107, 0.1);
+      color: #ff6b6b;
+      border: 1px solid rgba(255, 107, 107, 0.3);
+    }
+
+    .footer {
+      margin-top: 14px;
+      padding-top: 10px;
+      border-top: 1px solid #21262d;
+      font-size: 10px;
+      color: #484f58;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>⚡ Lightning Fleet Tracker</h1>
+  </div>
+
+  <div class="status-section">
+    <div class="status-row">
+      <span class="status-label">Status</span>
+      <span class="status-value" id="status">
+        <span class="status-dot idle" id="statusDot"></span>
+        <span id="statusText">Idle</span>
+      </span>
+    </div>
+    <div class="status-row">
+      <span class="status-label">Captures</span>
+      <span class="status-value" id="captureCount">0</span>
+    </div>
+    <div class="status-row">
+      <span class="status-label">Last capture</span>
+      <span class="status-value" id="lastCapture" title="">—</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-title">GitHub Connection</div>
+  <div class="status-row" style="margin-bottom: 8px;">
+    <span class="status-label">Push status</span>
+    <span class="status-value">
+      <span class="status-dot idle" id="githubDot"></span>
+      <span id="githubStatus">Not configured</span>
+    </span>
+  </div>
+
+  <div class="input-group">
+    <input type="password" id="tokenInput" placeholder="GitHub Personal Access Token" />
+  </div>
+
+  <div class="btn-row">
+    <button class="btn" id="saveToken" style="flex:1">Save Token</button>
+    <button class="btn-primary btn" id="pushNow" style="flex:1">Push Now</button>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <div class="footer">
+    Auto-pushes every 5 minutes when captures are active
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
