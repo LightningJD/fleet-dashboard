@@ -7,11 +7,15 @@
   "scripts": {
     "serve": "python3 -m http.server 5173",
     "validate": "node scripts/validate-data.mjs",
+    "collect:market": "node scripts/collect-market.mjs",
+    "validate:market": "node scripts/validate-market-snapshots.mjs",
     "analyze": "node scripts/pricing-engine.mjs",
-    "check": "npm run validate && npm run analyze && node scripts/check-app.mjs"
+    "check": "npm run validate && npm run validate:market && npm run analyze && node scripts/check-app.mjs"
   },
   "engines": {
     "node": ">=18"
   },
-  "devDependencies": {}
+  "dependencies": {
+    "playwright": "^1.49.1"
+  }
 }
