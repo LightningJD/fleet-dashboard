@@ -9,13 +9,11 @@
     "validate": "node scripts/validate-data.mjs",
     "collect:market": "node scripts/collect-market.mjs",
     "validate:market": "node scripts/validate-market-snapshots.mjs",
-    "analyze": "node scripts/pricing-engine.mjs",
-    "check": "npm run validate && npm run validate:market && npm run analyze && node scripts/check-app.mjs"
+    "analyze": "node scripts/pricing-engine.mjs && node scripts/merge-market-snapshots.mjs",
+    "check": "npm run validate && npm run collect:market && npm run validate:market && npm run analyze && node scripts/check-app.mjs"
   },
   "engines": {
     "node": ">=18"
   },
-  "dependencies": {
-    "playwright": "^1.49.1"
-  }
+  "dependencies": {}
 }
