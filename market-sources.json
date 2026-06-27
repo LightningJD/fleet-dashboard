@@ -1,0 +1,35 @@
+{
+  "lastUpdated": "2026-06-27T13:30:00-07:00",
+  "policy": {
+    "mode": "semi_automated_public_browser_research",
+    "notes": [
+      "Only add public listing/search URLs that you are authorized to review.",
+      "Do not add private dashboards, login-only URLs, or endpoints intended for internal app/API use.",
+      "Collector runs slowly and stores only visible market research fields needed for pricing decisions."
+    ]
+  },
+  "segments": [
+    {
+      "id": "tesla_model_3_las_vegas",
+      "label": "Tesla Model 3 Las Vegas",
+      "vehicleSegment": "ev_sedan",
+      "enabled": true,
+      "sourceType": "manual_seeded_public_listing_urls",
+      "urls": [
+        "https://turo.com/us/en/car-rental/united-states/las-vegas-nv/tesla/model-3/3335076",
+        "https://turo.com/us/en/car-rental/united-states/las-vegas-nv/tesla/model-3/2435249",
+        "https://turo.com/us/en/car-rental/united-states/las-vegas-nv/tesla/model-3/1474910",
+        "https://turo.com/us/en/car-rental/united-states/las-vegas-nv/tesla/model-3/3716217",
+        "https://turo.com/us/en/car-rental/united-states/las-vegas-nv/tesla/model-3/2440304"
+      ]
+    },
+    {
+      "id": "hyundai_santa_fe_las_vegas",
+      "label": "Hyundai Santa Fe Las Vegas",
+      "vehicleSegment": "midsize_suv",
+      "enabled": false,
+      "sourceType": "manual_seeded_public_listing_urls",
+      "urls": []
+    }
+  ]
+}
