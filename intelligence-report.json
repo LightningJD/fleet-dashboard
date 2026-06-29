@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-28T19:38:51.918Z",
+  "generatedAt": "2026-06-29T04:41:54.532Z",
   "sourceLastUpdated": "2026-06-18T06:14:00-07:00",
   "marketAnalysis": {
     "segment": "Tesla Model 3 Las Vegas",
@@ -36,7 +36,7 @@
     },
     "snapshot": {
       "status": "ok",
-      "generatedAt": "2026-06-28T19:38:51.602Z",
+      "generatedAt": "2026-06-29T04:41:54.244Z",
       "ageHours": 0,
       "segmentId": "tesla_model_3_las_vegas",
       "segmentLabel": "Tesla Model 3 Las Vegas",
@@ -46,8 +46,8 @@
       "collector": {
         "mode": "semi_automated_public_research_import",
         "status": "ok",
-        "startedAt": "2026-06-28T19:38:51.601Z",
-        "finishedAt": "2026-06-28T19:38:51.602Z",
+        "startedAt": "2026-06-29T04:41:54.244Z",
+        "finishedAt": "2026-06-29T04:41:54.244Z",
         "durationSeconds": 0,
         "totalListings": 5,
         "successfulListings": 5,
@@ -136,7 +136,7 @@
           "family"
         ],
         "notes": "Holiday weekend travel. Raise earlier if calendar tightens.",
-        "daysUntil": 5
+        "daysUntil": 4
       }
     ],
     "highestDemandEvent": {
@@ -153,7 +153,7 @@
         "family"
       ],
       "notes": "Holiday weekend travel. Raise earlier if calendar tightens.",
-      "daysUntil": 5
+      "daysUntil": 4
     }
   },
   "actionPlan": [
@@ -170,7 +170,7 @@
     {
       "priority": "high",
       "action": "Prepare event pricing for Independence Day Weekend.",
-      "reason": "Independence Day Weekend starts in 5 day(s), demand score 8/10, suggested multiplier 1.25x."
+      "reason": "Independence Day Weekend starts in 4 day(s), demand score 8/10, suggested multiplier 1.25x."
     },
     {
       "priority": "high",
@@ -185,7 +185,7 @@
       "title": "Raise/test weekend Tesla Model 3 price to $76 for the next 2 weekends.",
       "body": "Current weekend price $56 vs market median $64.",
       "status": "open",
-      "generatedAt": "2026-06-28T19:38:51.918Z"
+      "generatedAt": "2026-06-29T04:41:54.532Z"
     },
     {
       "id": "alert-2",
@@ -193,15 +193,15 @@
       "title": "Test weekday Tesla Model 3 price at $63.",
       "body": "Current weekday price $55 vs market median $53.",
       "status": "open",
-      "generatedAt": "2026-06-28T19:38:51.918Z"
+      "generatedAt": "2026-06-29T04:41:54.532Z"
     },
     {
       "id": "alert-3",
       "priority": "high",
       "title": "Prepare event pricing for Independence Day Weekend.",
-      "body": "Independence Day Weekend starts in 5 day(s), demand score 8/10, suggested multiplier 1.25x.",
+      "body": "Independence Day Weekend starts in 4 day(s), demand score 8/10, suggested multiplier 1.25x.",
       "status": "open",
-      "generatedAt": "2026-06-28T19:38:51.918Z"
+      "generatedAt": "2026-06-29T04:41:54.532Z"
     },
     {
       "id": "alert-4",
@@ -209,7 +209,7 @@
       "title": "Finish 2022 Hyundai Santa Fe listing.",
       "body": "Needs photos & listing completion",
       "status": "open",
-      "generatedAt": "2026-06-28T19:38:51.918Z"
+      "generatedAt": "2026-06-29T04:41:54.532Z"
     }
   ],
   "dashboardStatus": {
@@ -229,7 +229,7 @@
   ],
   "marketSnapshot": {
     "status": "ok",
-    "generatedAt": "2026-06-28T19:38:51.602Z",
+    "generatedAt": "2026-06-29T04:41:54.244Z",
     "ageHours": 0,
     "segmentId": "tesla_model_3_las_vegas",
     "segmentLabel": "Tesla Model 3 Las Vegas",
@@ -239,8 +239,8 @@
     "collector": {
       "mode": "semi_automated_public_research_import",
       "status": "ok",
-      "startedAt": "2026-06-28T19:38:51.601Z",
-      "finishedAt": "2026-06-28T19:38:51.602Z",
+      "startedAt": "2026-06-29T04:41:54.244Z",
+      "finishedAt": "2026-06-29T04:41:54.244Z",
       "durationSeconds": 0,
       "totalListings": 5,
       "successfulListings": 5,
