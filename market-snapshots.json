@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-06-30T09:52:11.839Z",
+  "generatedAt": "2026-06-30T14:32:18.352Z",
   "collector": {
     "mode": "semi_automated_public_research_import",
     "status": "ok",
-    "startedAt": "2026-06-30T09:52:11.839Z",
-    "finishedAt": "2026-06-30T09:52:11.839Z",
+    "startedAt": "2026-06-30T14:32:18.351Z",
+    "finishedAt": "2026-06-30T14:32:18.352Z",
     "durationSeconds": 0,
     "totalListings": 5,
     "successfulListings": 5,
@@ -17,11 +17,11 @@
       "label": "Tesla Model 3 Las Vegas",
       "vehicleSegment": "ev_sedan",
       "sourceType": "manual_verified_public_research",
-      "observedAt": "2026-06-30T09:52:11.839Z",
+      "observedAt": "2026-06-30T14:32:18.351Z",
       "listings": [
         {
           "sourceUrl": null,
-          "observedAt": "2026-06-30T09:52:11.839Z",
+          "observedAt": "2026-06-30T14:32:18.351Z",
           "segmentId": "tesla_model_3_las_vegas",
           "segmentLabel": "Tesla Model 3 Las Vegas",
           "vehicleSegment": "ev_sedan",
@@ -36,7 +36,7 @@
         },
         {
           "sourceUrl": null,
-          "observedAt": "2026-06-30T09:52:11.839Z",
+          "observedAt": "2026-06-30T14:32:18.351Z",
           "segmentId": "tesla_model_3_las_vegas",
           "segmentLabel": "Tesla Model 3 Las Vegas",
           "vehicleSegment": "ev_sedan",
@@ -51,7 +51,7 @@
         },
         {
           "sourceUrl": null,
-          "observedAt": "2026-06-30T09:52:11.839Z",
+          "observedAt": "2026-06-30T14:32:18.351Z",
           "segmentId": "tesla_model_3_las_vegas",
           "segmentLabel": "Tesla Model 3 Las Vegas",
           "vehicleSegment": "ev_sedan",
@@ -66,7 +66,7 @@
         },
         {
           "sourceUrl": null,
-          "observedAt": "2026-06-30T09:52:11.839Z",
+          "observedAt": "2026-06-30T14:32:18.351Z",
           "segmentId": "tesla_model_3_las_vegas",
           "segmentLabel": "Tesla Model 3 Las Vegas",
           "vehicleSegment": "ev_sedan",
@@ -81,7 +81,7 @@
         },
         {
           "sourceUrl": null,
-          "observedAt": "2026-06-30T09:52:11.839Z",
+          "observedAt": "2026-06-30T14:32:18.351Z",
           "segmentId": "tesla_model_3_las_vegas",
           "segmentLabel": "Tesla Model 3 Las Vegas",
           "vehicleSegment": "ev_sedan",
